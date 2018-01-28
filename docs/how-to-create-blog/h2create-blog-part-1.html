@@ -1,0 +1,44 @@
+<h2>Create project based on ng-cli tool</h2>
+<p>Hi everybode! Today I started series of articles to create blog based on angular 5, bootstrap and spring reactive backend.</p>
+<h3>Install Angular CLI and create new project</h3>
+<p>Let's install CLI for Angular applications </p>
+<p>angular npm install -g @angular/cli</p>
+
+Then we create new angular project via angular@clie
+<p>ng new blog-front-app --styles==scss</p>
+
+
+<p>Ng-Bootstrap contains a set of native Angular directives based on Bootstrap’s markup and CSS. As a result no dependency on jQuery or Bootstrap’s JavaScript is required. Ng-Bootstrap is based on Bootstrap 4 and can be added to your Angular project is the following way.</p>
+npm install bootstrap@4.0.0-alpha.6
+
+npm install --save @ng-bootstrap/ng-bootstrap
+
+<p>Add to .angular-cli.json</p>
+"scripts": [
+"../node_modules/jquery/dist/jquery.min.js",
+"../node_modules/bootstrap/dist/js/bootstrap.min.js"
+],
+
+<p>Also you can find that package.json include npm actions that's quite nice in use.</p>
+
+"scripts": {
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build --prod",
+  "test": "ng test",
+  "lint": "ng lint",
+  "e2e": "ng e2e"
+},
+
+<p>Add to app.module.ts</p>
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+<p>Copy fonts to assets directory</p>
+
+<p>Please also check in .angular-cli.json</p>
+
+"styles": [
+"styles.scss"
+],
+
+<p>Add font-face rule to style.scss</p>
