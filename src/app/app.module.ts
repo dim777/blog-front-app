@@ -2,23 +2,30 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { Routes, RouterModule } from '@angular/router';
+import { LoadingModule } from 'ngx-loading';
 
 import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
+import {ArticlesComponent} from './articles/articles.component';
 
-import { LoadingModule } from 'ngx-loading';
-
+const appRoutes: Routes = [
+  { path: '', component: ArticlesComponent},
+  { path: ':alias', component: ArticleComponent},
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArticleComponent
+    ArticleComponent,
+    ArticlesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     LoadingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,4 +4,5 @@ export class Article {
   shorttext: string;
   fulltext: string;
   created: string;
+  category: string;
 }
