@@ -10,11 +10,9 @@ export class ArticleService {
   constructor(private http: HttpClient) { }
 
   getArticles(): Observable<Article[]> {
-    return this.http.get('http://localhost:9600/articles').map(data => {
-      const articles = data[''];
-      return articles.map(function(article: any) {
-        return {title: article.title, alias: article.alias};
-      });
+    return this.http.get('http://localhost:9600/articles')
+      .map(data => {
+        return data as Array<Article>;
     });
   }
 }
