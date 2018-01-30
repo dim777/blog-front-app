@@ -9,13 +9,20 @@ import { Article } from './article';
   providers: [ ArticleService ]
 })
 export class AppComponent implements OnInit {
+  public loading = false;
 
   articles: Article[] = [];
 
   constructor(private articleService: ArticleService) {}
 
   ngOnInit() {
-
-    this.articleService.getArticles().subscribe(data => this.articles = data);
+    this.loading = true;
+    this.articleService.getArticles()
+      .subscribe(data => {
+        this.articles = data;
+        this.loading = false;
+      }, err => {
+        this.loading = false;
+      });
   }
 }

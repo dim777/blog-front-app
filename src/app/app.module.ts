@@ -6,6 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 
+import { LoadingModule } from 'ngx-loading';
+
 
 @NgModule({
   declarations: [
@@ -15,6 +17,7 @@ import { ArticleComponent } from './article/article.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    LoadingModule,
     NgbModule.forRoot()
   ],
   providers: [],
