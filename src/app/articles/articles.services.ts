@@ -6,13 +6,21 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ArticlesService {
+  private readonly size = 10;
 
   constructor(private http: HttpClient) { }
 
   getArticles(): Observable<Article[]> {
-    return this.http.get('http://localhost:9600/articles')
+    return this.http.get('http://localhost:9600/articles?size=' + this.size)
       .map(data => {
         return data as Array<Article>;
     });
+  }
+
+  getFeaturedArticles(): Observable<Article[]> {
+    return this.http.get('http://localhost:9600/articles/featured?size=' + this.size)
+      .map(data => {
+        return data as Array<Article>;
+      });
   }
 }

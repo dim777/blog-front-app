@@ -14,6 +14,8 @@ export class ArticlesComponent implements OnInit {
 
   articles: Article[] = [];
 
+  featuredArticles: Article[] = [];
+
   constructor(private articleService: ArticlesService) {}
 
   ngOnInit() {
@@ -21,6 +23,15 @@ export class ArticlesComponent implements OnInit {
     this.articleService.getArticles()
       .subscribe(data => {
         this.articles = data;
+        this.loading = false;
+      }, err => {
+        this.loading = false;
+      });
+
+    this.loading = true;
+    this.articleService.getFeaturedArticles()
+      .subscribe(data => {
+        this.featuredArticles = data;
         this.loading = false;
       }, err => {
         this.loading = false;

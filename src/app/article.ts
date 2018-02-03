@@ -1,3 +1,8 @@
+class FeaturedAttributes {
+  priority: number;
+  bgImage: string;
+}
+
 export class Article {
   title: string;
   alias: string;
@@ -5,4 +10,5 @@ export class Article {
   fulltext: string;
   created: string;
   category: string;
+  featuredAttributes: FeaturedAttributes;
 }

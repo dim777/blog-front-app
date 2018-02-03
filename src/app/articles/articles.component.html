@@ -6,7 +6,23 @@
   </div>
 </div>
 
-<div class="row mb-2">
+<div class="row mb-2 featured-articles">
+  <ngx-loading [show]="loading" [config]="{ backdropBackgroundColour: 'rgba(255,255,255,0.3)', primaryColour: '#2664a1', secondaryColour: '#2664a1' , tertiaryColour: '#2664a1' }"></ngx-loading>
+  <div *ngFor="let farticle of featuredArticles" class="col-md-6">
+    <div class="card flex-md-row mb-4 box-shadow h-md-250">
+      <div class="card-body d-flex flex-column align-items-start">
+        <strong class="d-inline-block mb-2 text-primary">{{farticle.category}}</strong>
+        <h3 class="mb-0">
+          <a class="text-dark" href="#">Featured post</a>
+        </h3>
+        <div class="mb-1 text-muted">{{farticle.created}}</div>
+        <p class="card-text mb-auto">{{farticle.shorttext}}</p>
+        <a href="#">Continue reading</a>
+      </div>
+      <img class="card-img-right flex-auto d-none d-md-block" data-src="{{farticle.featuredAttributes.bgImage}}" alt="Card image cap">
+    </div>
+  </div>
+
   <div class="col-md-6">
     <div class="card flex-md-row mb-4 box-shadow h-md-250">
       <div class="card-body d-flex flex-column align-items-start">
