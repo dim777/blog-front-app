@@ -8,6 +8,8 @@ import { LoadingModule } from 'ngx-loading';
 import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import {ArticlesComponent} from './articles/articles.component';
+import { MenuComponent } from './menu/menu.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
   { path: '', component: ArticlesComponent},
@@ -18,7 +20,9 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ArticleComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    MenuComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

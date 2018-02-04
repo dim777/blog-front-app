@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 import {ArticleService} from './article.services';
-import {Article} from '../article';
+import {Article} from '../model/article';
 
 @Component({
   selector: 'app-article',
