@@ -42,7 +42,50 @@
   font-style: italic;
 };
 
+/**
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+"blue":       $blue,
+"indigo":     $indigo,
+"purple":     $purple,
+"pink":       $pink,
+"red":        $red,
+"orange":     $orange,
+"yellow":     $yellow,
+"green":      $green,
+"teal":       $teal,
+"cyan":       $cyan,
+"white":      $white,
+"gray":       $gray-600,
+"gray-dark":  $gray-800
+**/
+
 body {
+  .bg-img-cover {
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .font-highlight {
+    background-color:rgba($secondary, 0.8);
+    color: $warning;
+  }
+
+  .categories-list {
+    margin-right: 0.25em;
+  }
+
+
   .blog-header {
     line-height: 1;
     border-bottom: 1px solid #e5e5e5;

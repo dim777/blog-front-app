@@ -1,0 +1,6 @@
+<div class="nav-scroller py-1 mb-2">
+  <ngx-loading [show]="loading" [config]="{ backdropBackgroundColour: 'rgba(255,255,255,0.3)', primaryColour: '#2664a1', secondaryColour: '#2664a1' , tertiaryColour: '#2664a1' }"></ngx-loading>
+  <nav class="nav d-flex justify-content-between">
+    <a *ngFor="let item of categories" class="p-2 text-muted" href="#">{{item.name}}</a>
+  </nav>
+</div>

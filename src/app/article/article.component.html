@@ -1,6 +1,29 @@
-<p>
+<div class="article-item">
   <ngx-loading [show]="loading" [config]="{ backdropBackgroundColour: 'rgba(255,255,255,0.3)', primaryColour: '#2664a1', secondaryColour: '#2664a1' , tertiaryColour: '#2664a1' }"></ngx-loading>
+
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light bg-img-cover" style="background-image: url('/assets/img/article_1_bg.png');">
+    <div class="col-md-5 mx-auto my-5">
+      <h1 class="display-4 font-weight-normal"><span class="font-highlight">Punny headline</span></h1>
+      <p class="lead font-weight-normal"><span class="font-highlight">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.</span></p>
+    </div>
+  </div>
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      <p [innerHtml]="article?.fulltext"></p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img class="featurette-image img-fluid mx-auto" src="/assets/img/giphy2.gif" alt="Generic placeholder image">
+    </div>
+  </div>
+</div>
+
+
+
+<p>
   article works!
   {{alias}}<br>
-  {{article?.fulltext}}
+
 </p>
